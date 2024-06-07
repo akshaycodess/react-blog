@@ -4,6 +4,10 @@
 
 ### check `node -v` > 5, if not download latest [Nodejs](https://nodejs.org/en)
 
+other useful tools
+[Simple React Snippets](burkeholland.simple-react-snippets)
+[React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+
 ### navigate to project directory and run `npx create-react-app react-blog`
 
 ### now run `npm start`
