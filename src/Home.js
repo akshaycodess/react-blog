@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Bloglist from "./BlogList";
 
 const Home = () => {
@@ -12,6 +12,11 @@ const Home = () => {
         const newBlogs = blogs.filter(blog => blog.id !== id);
         setBlogs(newBlogs);
     }
+
+    // runs on every render, can be used to fetch datas
+    useEffect(() => {
+        console.log(blogs)
+    });
 
     return (
     <div className="home">
