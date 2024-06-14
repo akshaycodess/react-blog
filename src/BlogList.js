@@ -3,7 +3,7 @@
 //   const blogs = props.blogs;
 //   const title = props.title;
 // new/clean way to get passed parameters
-const Bloglist = ({ blogs, title, handleDelete }) => {
+const Bloglist = ({ blogs, title }) => {
   return (
     <div className="blog-list">
       <h2>{title}</h2>
@@ -11,7 +11,6 @@ const Bloglist = ({ blogs, title, handleDelete }) => {
         <div className="blog-preview" key={blog.id}>
           <h2>{blog.title}</h2>
           <p>Written by: {blog.author}</p>
-          <button onClick={() => handleDelete(blog.id)}>delete blog</button>
         </div>
       ))}
     </div>
