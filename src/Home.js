@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Bloglist from "./BlogList";
 import useFetch from "./useFetch";
 
