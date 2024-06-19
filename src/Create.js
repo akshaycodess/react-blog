@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
     const [author, setAuthor] = useState("mario");
     const [isPending, setisPending] = useState(false);
-    
+    const redirect = useHistory();
+
     const handleSubmit = (e) => {
       e.preventDefault();
       const blogDetails = { title, body, author };
@@ -16,10 +18,14 @@ const Create = () => {
         body: JSON.stringify(blogDetails),
       }).then((res) => {
         if (res.status != 201) {
-          console.log(res.status); 
+          console.log(res.status);
         }
         console.log("new blog added");
         setisPending(false);
+        // goes backward
+        // redirect.go(-1);
+        // goes to given path
+        redirect.push('/');
       });
       console.log(blogDetails);
     }
@@ -55,5 +61,5 @@ const Create = () => {
       </div>
     );
 }
- 
+
 export default Create;
